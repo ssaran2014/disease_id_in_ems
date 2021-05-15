@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--https://stackoverflow.com/questions/60032983/record-voice-with-recorder-js-and-upload-it-to-python-flask-server-but-wav-file-->
+<html lang="en-us">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>EMS Disease Identifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1>EMS Disease Identifier</h1>
+
+    <div id="controls">
+     <button id="recordButton">Record</button>
+     <button id="pauseButton" disabled>Pause</button>
+     <button id="stopButton" disabled>Stop</button>
+    </div>
+    <div id="formats">Format: start recording to see sample rate</div>
+    <p><strong>Recordings:</strong></p>
+    <ol id="recordingsList"></ol>
+
+    <p><span id="speech_recognition"></span></p>
+    <p><span id="top_issue"></span></p>
+    <p><span id="top_issue_symptom"></span></p>
+    <p><span id="top_issue_url"></span></p>
+    <p><span id="top_five"></span></p>
+
+
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="/static/app2.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+  </body>
+</html>
