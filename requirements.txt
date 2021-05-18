@@ -1,5 +1,6 @@
 datasets==1.4.1
 transformers==4.4.0
+flask==2.0.0
 soundfile
 jiwer
 librosa
